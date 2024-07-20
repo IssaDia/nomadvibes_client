@@ -1,5 +1,5 @@
 export const links = [
-  { key: "home", path: "/", label: "Home" },
-  { key: "about", path: "/about", label: "About" },
+  { key: "activities", path: "/activities", label: "Activities" },
   { key: "contact", path: "/contact", label: "Contact" },
+  { key: "profile", path: "/profile", label: "Profile", requiresAuth: true },
 ];

@@ -50,21 +50,21 @@ const Header: React.FC<HeaderProps> = ({
               className="flex-grow justify-end border-none bg-transparent"
             >
               {links.map((link) => (
-                <Menu.Item key={link.key} style={{ borderBottom: "none" }}>
-                  <Link
-                    to={link.path}
-                    className="text-white/50 hover:text-white"
-                  >
+                <Menu.Item
+                  key={link.key}
+                  style={{ borderBottom: "none", color: "white" }}
+                >
+                  <Link to={link.path} className="">
                     {link.label}
                   </Link>
                 </Menu.Item>
               ))}
               {isAuthenticated ? (
-                <Menu.Item key="logout" style={{ borderBottom: "none" }}>
-                  <button
-                    onClick={onLogout}
-                    className="text-white/50 hover:text-white"
-                  >
+                <Menu.Item
+                  key="logout"
+                  style={{ borderBottom: "none", color: "white" }}
+                >
+                  <button onClick={onLogout} className="">
                     Logout
                   </button>
                 </Menu.Item>
@@ -72,6 +72,9 @@ const Header: React.FC<HeaderProps> = ({
                 <Menu.Item key="login" style={{ borderBottom: "none" }}>
                   <Link to="/login" className="text-white/50 hover:text-white">
                     Login
+                  </Link>
+                  <Link to="/signup" className="text-white/50 hover:text-white">
+                    Signup
                   </Link>
                 </Menu.Item>
               )}
@@ -118,7 +121,7 @@ const Header: React.FC<HeaderProps> = ({
           <Title
             text={title}
             size="5xl"
-            color="text-white"
+            color="white"
             margin="m-8"
             padding="p-4"
             textAlign="left"
